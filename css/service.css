@@ -1,0 +1,920 @@
+/* 商品选择特效样式 */
+.content {
+    transform: translateY(-10px);
+    /* transform: translate3d(0,-10px,0); */
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+}
+
+/* index.html的样式 */
+.head {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+
+/* 设置导航条文字的效果 */
+.head a {
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+
+/* 设置line间隔条的样式 */
+.head-main .line {
+    color: #424242;
+    font-size: 12px;
+    margin: 0 6px;
+}
+
+/* 设置左侧导航条的样式 */
+.head-list, .head-main li {
+    float: left;
+}
+
+.head-list a:hover, .user-info a:hover {
+    color: #fff;
+}
+
+/* 设置app下的小三角 */
+.app::after {
+    content: '';
+    display: none;
+    width: 0;
+    height: 0;
+    /* 设置四个方向的边框 */
+    border: 8px solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* 设置下载app的二维码弹窗的样式 */
+.app {
+    position: relative;
+}
+
+.app:hover .qrcode,
+.app:hover::after {
+    display: block;
+    height: 148px;
+}
+
+.head-list .qrcode {
+    position: absolute;
+    left: -34px;
+    /* height: 148px; */
+    height: 0;
+    overflow: hidden;
+    width: 124px;
+    line-height: 0.5;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* transition :用于给样式设置过度效果 */
+    transition: height 0.5s;
+    z-index: 9999;
+}
+
+.qrcode p {
+    font-size: 15px;
+    text-align: center;
+    color: #222;
+}
+
+.qrcode img {
+    width: 90px;
+    height: 90px;
+    margin: 17px;
+}
+
+/* 设置用户登录导航条的样式 */
+.user-info {
+    float: right;
+}
+
+/* 设置购物车的样式 */
+.shop-car {
+    float: right;
+    margin-left: 25px;
+    background-color: red;
+    background-color: #424242;
+}
+
+.shop-car .car a {
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    color: #b0b0b0;
+}
+
+/* 设置购物车的弹窗 */
+.phone-bar .car-list {
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    width: 316px;
+    height: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 9999;
+    display: none;
+}
+
+.phone-bar .car-list .car-content {
+    /* display: block; */
+    font-size: 12px;
+    line-height: 100px;
+    text-align: center;
+    display: none;
+}
+
+/* 设置logo一排的导航条 */
+/* 设置logo导航条的长度 */
+.phone-main {
+    width: 1226px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 设置logo的样式 */
+.phone-main .logo img {
+    float: left;
+    width: 56px;
+    height: 56px;
+    margin-top: 22px;
+}
+
+.all-thing-wrapper .all-thing {
+    cursor: pointer;
+    color: #333;
+}
+
+/* 设置手机导航条的样式 */
+.phone-list>ul>li {
+    float: left;
+}
+
+.all-thing-wrapper .all-thing {
+    width: 127px;
+    height: 88px;
+    padding: 26px 10px 40px;
+    cursor: default;
+}
+
+.phone-list .thing-wrapper {
+    color: #333;
+    padding: 26px 10px 40px;
+    margin: 26px 0 38px 0;
+    line-height: 100px;
+    transition: color .2s;
+    cursor: default;
+}
+
+.phone-list .thing-wrapper span,
+.all-thing span {
+    cursor: pointer;
+}
+
+.phone-list {
+    margin-left: 115px;
+}
+
+
+/* 设置搜索框的样式 */
+.search-wrapper {
+    position: relative;
+    float: right;
+    width: 297px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 25px;
+}
+
+.search-wrapper .search-inp {
+    /* color: #b0b0b0; */
+    box-sizing: border-box;
+    float: left;
+    font-size: 14px;
+    width: 245px;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+}
+
+.search-wrapper .search-btn {
+    float: left;
+    width: 52px;
+    height: 50px;
+    border: none;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    background-color: #fff;
+}
+
+.search-wrapper .search-btn i {
+    font-size: 18px;
+}
+
+.search-wrapper .search-btn:hover {
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
+}
+
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus+.search-btn {
+    border-color: #ff6700;
+}
+
+/*设置搜索框的弹窗的样式 */
+.search-wrapper .search-list {
+    position: absolute;
+    top: 50px;
+    width: 243px;
+    height: 300px;
+    background: #fff;
+    border: 1px solid #ff6700;
+    border-top: none;
+    z-index: 999;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    display: none;
+}
+
+.search-wrapper .search-list li {
+    list-style: none;
+    line-height: 37.5px;
+    flex-grow: 1;
+}
+
+.search-wrapper .search-list a {
+    display: block;
+    width: 233px;
+    padding-left: 10px;
+    color: #333;
+    font-size: 12px;
+}
+
+.search-wrapper .search-list a:hover {
+    background-color: #fafafa;
+}
+
+.phone-bar {
+    position: relative;
+    background: #fff;
+}
+
+/* 设置手机下拉框的样式 */
+.phone-xiala {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 229px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid #e0e0e0;
+    z-index: 999;
+    display: none;
+}
+
+.phone-xiala .children-list .figure-thumb {
+    width: 160px;
+    height: 110px;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+
+.phone-xiala .children-list li {
+    position: relative;
+    float: left;
+    width: 180px;
+    padding: 35px 12px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.phone-xiala .children-list li:not(:nth-of-type(1))::before {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    content: " ";
+    width: 1px;
+    height: 100px;
+    background-color: #e0e0e0;
+}
+
+.phone-xiala .title {
+    margin: 0;
+    line-height: 20px;
+    color: #333;
+}
+
+.phone-xiala .price {
+    margin: 0;
+    line-height: 20px;
+    color: #ff6700;
+}
+
+/* 设置左侧导航条的样式 */
+.all-thing-wrapper {
+    position: relative;
+}
+
+.left-meau {
+    position: absolute;
+    left: -115px;
+    width: 232px;
+    height: 418px;
+    line-height: 1;
+    padding: 20px 0;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+    z-index: 999;
+    display: none;
+}
+
+.left-meau i {
+    float: right;
+    line-height: 42px;
+    font-size: 20px;
+    padding-right: 25px;
+    color: #e0e0e0;
+}
+
+.left-meau li a {
+    display: block;
+    line-height: 42px;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* .left-menu li a:hover {
+    background-color: #ff6700;
+    color: #fff;
+} */
+
+/* 轮播图 */
+.turn-picture {
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    border: 2px solid #fff !important;
+    border-color: hsla(0, 0%, 100%, .4) !important;
+    background-color: rgba(0, 0, 0, .4) !important;
+    opacity: 1 !important;
+    transition: background-color .3s;
+}
+
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet-active {
+    background: hsla(0, 0%, 100%, 1) !important;
+    border-color: rgba(0, 0, 0, .4) !important;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.swiper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 手机左侧弹出框 */
+.item {
+    width: 991px;
+    height: 458px;
+    background-color: #fff;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.18);
+    border: 1px solid #e0e0e0;
+    position: absolute;
+    left: 234px;
+    top: -41px;
+    z-index: 999;
+    display: none;
+}
+
+/* 小title的样式 */
+.title-text {
+    font-size: 12px;
+    height: 41px;
+    line-height: 41px;
+}
+
+.title-text a,
+.tab-content .per>a {
+    color: #757575;
+}
+
+
+/* 自组服务内容样式 */
+/* h2 */
+.service-index-goods h2,
+.service-index-fquestion h2,
+.service-index-center h2,
+.service-index-question h2,
+.service-index-content h2 {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    margin-top: 30px;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    height: 106px;
+    line-height: 106px;
+}
+
+/* 自组服务中div的样式 */
+.service-index-fquestion div {
+    width: 1240px;
+    height: 590px;
+}
+
+/* 产品支持中div的样式 */
+.service-index-goods div {
+    width: 1240px;
+    height: 610px;
+}
+
+.service-index-goods ul li,
+.service-index-fquestion ul li {
+    position: relative;
+    float: left;
+    width: 296px;
+    margin-right: 14px;
+    margin-bottom: 18px;
+    background-color: #fff;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: -13px -15px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.service-index-fquestion ul li {
+    height: 277px;
+}
+
+.service-index-goods ul li {
+    height: 287px;
+}
+
+.service-index-fquestion .service-transi-up a img {
+    margin-top: 76px;
+    width: 66px;
+    height: 66px;
+    display: inline-block;
+}
+
+.service-index-fquestion .service-transi-up h3 {
+    line-height: 46px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: .87;
+}
+
+.service-index-fquestion .service-transi-up span {
+    line-height: 14px;
+    display: block;
+    color: #757575;
+    font-size: 14px;
+}
+
+/* 产品支持内容样式 */
+.service-index-goods .service-transi-up a img {
+    height: 180px;
+    line-height: 180px;
+    margin: 45px auto 13px;
+    vertical-align: middle;
+}
+
+.service-index-goods .service-transi-up span {
+    line-height: 14px;
+    display: block;
+    color: #666666;
+    font-size: 16px;
+}
+
+/* 服务中心内容样式 */
+.service-index-center .center-content {
+    height: 360px;
+}
+
+.service-index-center .left img {
+    float: left;
+    width: 614px;
+}
+
+.service-index-center .right {
+    float: right;
+    background-color: #fff;
+    width: 612px;
+    height: 360px;
+    text-align: center;
+}
+
+.service-index-center .right p {
+    margin: 64px auto 15px;
+    color: #000;
+    font-size: 20px;
+}
+
+.service-index-center .right span,
+.service-index-center .right a {
+    color: #000;
+    font-size: 16px;
+    opacity: .6;
+}
+
+.service-index-center .right a {
+    display: inline-block;
+    margin-top: 40px;
+    transition: all .4s;
+}
+
+.service-index-center .right a:hover,
+.title-text a:hover,
+.service-index-question .tab-content .per li:hover,
+.service-index-question .tab-content .per a:hover,
+.phone-list .thing-wrapper:hover {
+    color: #ff6700;
+    opacity: 1;
+}
+
+.service-index-center .right .icon-wrap {
+    width: 500px;
+    height: 91px;
+    margin: 30px auto 10px;
+    opacity: .6;
+}
+
+.service-index-center .right .icon-wrap dl {
+    width: 100px;
+    float: left;
+}
+
+.service-index-center .right .icon-wrap dt,
+.service-index-center .right .icon-wrap dd {
+    margin-top: 10px;
+}
+
+/* 常见问题内容样式 */
+.service-index-question .input {
+    position: relative;
+    width: 646px;
+    margin: 0 auto 50px;
+    background-color: #fff;
+}
+
+.service-index-question .question {
+    outline: 0;
+    width: 567px;
+    height: 48px;
+    padding: 0 52px 0 27px;
+    color: #000;
+    border: 0;
+    opacity: .67;
+}
+
+.service-index-question button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    width: 52px;
+    line-height: 48px;
+    color: #616161;
+    font-size: 18px;
+    text-align: center;
+    background: #fff;
+    border: 0;
+    transition: all .4s;
+}
+
+.service-index-question button:hover,
+.active,
+.left-meau li a:hover {
+    color: #fff;
+    background-color: #ff6700;
+}
+
+.service-index-question .tips {
+    margin-top: 10px;
+    color: red;
+    font-size: 12px;
+}
+
+.service-index-question .tab-list {
+    line-height: 67px;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+}
+
+.service-index-question .tab-list li {
+    float: left;
+    width: 175.15px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.service-index-question .tab-content .per {
+    padding: 30px 0 18px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.service-index-question .tab-content .per li {
+    float: left;
+    width: 44%;
+    margin-left: 6%;
+    color: #e2e2e2;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: left;
+    list-style: disc;
+    transition: color .4s;
+}
+
+.service-index-question .tab-content .per li a {
+    display: block;
+    width: 87%;
+    color: #000;
+    font-size: 16px;
+    opacity: .87;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* float: left; */
+    transition: color .4s;
+}
+
+.service-index-question .center-content .more {
+    display: block;
+    height: 24px;
+    font-size: 16px;
+}
+
+/* 联系客服内容样式 */
+.service-index-content {
+    padding-bottom: 100px;
+}
+
+.service-index-content .common-content {
+    height: 586px;
+    width: 1240px;
+    text-align: center;
+    line-height: 160%;
+}
+
+.service-index-content .per {
+    float: left;
+    width: 296px;
+    height: 276px;
+    margin: 0 14px 18px 0;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.service-index-content .service-transi-up p {
+    margin-top: 116px;
+}
+
+.service-index-content .service-transi-up span {
+    margin-left: 20px;
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    top: -14px;
+}
+
+.service-index-content .service-transi-bottom .tip-top {
+    margin-top: 105px;
+}
+
+.service-index-content .service-transi-bottom .two-line {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.service-index-content .service-transi-bottom .tip {
+    margin: 50px 0 14px;
+    color: #000;
+    opacity: .54;
+    font-size: 14px;
+}
+
+/* 结尾部分服务的部分样式 */
+.finnal {
+    position: relative;
+    background: #fff;
+}
+
+.finnal .finnal-service {
+    height: 25px;
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.finnal-service li {
+    position: relative;
+    float: left;
+    width: 19.8%;
+    height: 25px;
+    border-left: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.finnal-service li a {
+    color: #616161;
+    font-size: 16px;
+    transition: all .2s linear;
+}
+
+.finnal-service li i {
+    margin-right: 5px;
+}
+
+.finnal-service li:first-child {
+    border-left: 0;
+}
+
+.finnal-service li a:hover,
+.finnal-links .col-contact .floow i:hover,
+.finnal-links .col-links dd a:hover,
+.info-text .sites a:hover {
+    color: #ff6700;
+}
+
+.finnal .finnal-links {
+    height: 172.5px;
+    padding: 40px 0;
+}
+
+.finnal-links .col-links {
+    float: left;
+    width: 160px;
+    margin: 0;
+}
+
+.finnal-links .col-links dd a {
+    margin: 10px 0 0;
+    font-size: 12px;
+    display: block;
+    height: 18px;
+    color: #424242;
+}
+
+.finnal-links .col-links dt {
+    margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+}
+
+.finnal .col-contact {
+    float: right;
+    width: 251px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+    font-size: 12px;
+}
+
+.finnal .col-contact .phone {
+    color: #ff6700;
+    font-size: 22px;
+}
+
+.finnal .col-contact p {
+    margin-bottom: 5px;
+}
+
+.finnal .col-contact .btn-primary {
+    display: inline-block;
+    border: 1px solid #b0b0b0;
+    margin-top: 5px;
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    border-color: #ff6700;
+    background: #fff;
+    color: #ff6700;
+    transition: all .4s;
+}
+
+.floow {
+    font-size: 12px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.floow i {
+    color: #757575;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.floow img {
+    width: 126px;
+    position: absolute;
+    right: 0;
+    top: 19px;
+    left: 0;
+    margin: auto;
+    display: none;
+}
+
+.finnal .col-contact .btn-primary:hover {
+    background-color: #ff6700;
+    color: #fff;
+}
+
+.info {
+    padding: 30px 0;
+    font-size: 12px;
+    background-color: #fafafa;
+}
+
+.info-text {
+    height: 157px;
+    font-size: 12px;
+}
+
+.info-text .sites a {
+    color: #424242;
+}
+
+.info .info-text img {
+    float: left;
+    width: 56px;
+    height: 56px;
+    margin-right: 20px;
+}
+
+.info .info-text p {
+    margin: 0;
+    line-height: 18px;
+}
